@@ -1,6 +1,6 @@
-# IEEE Transactions 中文论文写作技能
+# IEEE 学术论文写作技能
 
-IEEE Transactions 论文写作 Skill：面向 Codex、 Claude Code 等 Agents 的学术论文写作与审查，由一个主 skill 和七个章节子 skill 组成。
+IEEE 学术论文写作 Skill：面向 Codex、 Claude Code 等 Agents 的学术论文写作与审查，由一个主 skill 和七个章节子 skill 组成。
 
 即使这是一个 Agent 写作 skill，仍建议作者基于其思想，以简体中文**亲手完成底稿**。本 skill 更加提倡 AI 辅助规划、整理、翻译、修改和打磨，而非全权代写。
 
@@ -10,7 +10,8 @@ IEEE Transactions 论文写作 Skill：面向 Codex、 Claude Code 等 Agents �
 
 ## 适用范围
 
-- 面向简体中文用户，指导智能体完成 IEEE Transactions 系列期刊论文的写作与审查。
+- 面向简体中文用户，指导智能体完成 IEEE 学术论文的写作与审查。
+- 默认投稿目标为 IEEE Transactions 期刊，按实际投稿目标及稿件类型调整，官方投稿要求优先。
 - 支持从零搭建论文框架、章节写作、已有稿件修改与审查、参考文献核验和篇幅控制。
 
 ## 安装
@@ -18,7 +19,7 @@ IEEE Transactions 论文写作 Skill：面向 Codex、 Claude Code 等 Agents �
 ### 方法一：通过 npx 一键安装（推荐）
 
 ```bash
-npx skills add https://github.com/Arcadiastra/ieee-transactions-paper-writing-zh.git
+npx skills add https://github.com/Arcadiastra/ieee-paper-writing-zh.git
 ```
 
 需要已安装 Node.js 和 npm，运行后按提示选择目标工具和安装范围。
@@ -27,16 +28,16 @@ npx skills add https://github.com/Arcadiastra/ieee-transactions-paper-writing-zh
 
 ```bash
 # 克隆到 Codex 的 skills 目录
-git clone https://github.com/Arcadiastra/ieee-transactions-paper-writing-zh.git ~/.agents/skills/ieee-transactions-paper-writing-zh
+git clone https://github.com/Arcadiastra/ieee-paper-writing-zh.git ~/.agents/skills/ieee-paper-writing-zh
 
 # 克隆到 Claude Code 的 skills 目录
-git clone https://github.com/Arcadiastra/ieee-transactions-paper-writing-zh.git ~/.claude/skills/ieee-transactions-paper-writing-zh
+git clone https://github.com/Arcadiastra/ieee-paper-writing-zh.git ~/.claude/skills/ieee-paper-writing-zh
 ```
 
 ### 方法三：手动安装
 
 1. 下载本项目的 ZIP 文件或克隆到本地。
-2. 将解压后的文件夹重命名为 `ieee-transactions-paper-writing-zh`，复制到对应工具的 skills 目录：
+2. 将解压后的文件夹重命名为 `ieee-paper-writing-zh`，复制到对应工具的 skills 目录：
 
 | 工具        | macOS / Linux         | Windows                           |
 | ----------- | --------------------- | --------------------------------- |
@@ -50,13 +51,13 @@ git clone https://github.com/Arcadiastra/ieee-transactions-paper-writing-zh.git 
 **Codex：**
 
 ```text
-$ieee-transactions-paper-writing-zh
+$ieee-paper-writing-zh
 ```
 
 **Claude Code：**
 
 ```text
-/ieee-transactions-paper-writing-zh
+/ieee-paper-writing-zh
 ```
 
 如果安装成功，该技能将被激活。
@@ -64,7 +65,7 @@ $ieee-transactions-paper-writing-zh
 ## 结构与入口
 
 ```text
-ieee-transactions-paper-writing-zh/
+ieee-paper-writing-zh/
 ├── SKILL.md
 ├── README.md
 ├── LICENSE
@@ -105,11 +106,11 @@ ieee-transactions-paper-writing-zh/
 在支持 skill 名称调用的环境中，可使用：
 
 ```text
-$ieee-transactions-paper-writing-zh，先审查论文结构与贡献链，给出修改详案，暂不改正文。
+$ieee-paper-writing-zh，先审查论文结构与贡献链，给出修改详案，暂不改正文。
 
-$ieee-transactions-paper-writing-abstract-zh，按正文内容修改摘要，并提供原文、改文及修改理由。
+$ieee-paper-writing-abstract-zh，按正文内容修改摘要，并提供原文、改文及修改理由。
 
-$ieee-transactions-paper-writing-results-and-discussions-zh，检查结果分析是否回应问题与机制，避免复述图表数字。
+$ieee-paper-writing-results-and-discussions-zh，检查结果分析是否回应问题与机制，避免复述图表数字。
 ```
 
 若宿主没有发现子 skill，指定对应文件路径，或通过主 skill 请求处理该章节。
@@ -130,8 +131,8 @@ $ieee-transactions-paper-writing-results-and-discussions-zh，检查结果分析
 
 每个 `SKILL.md` 均包含 `name`、`description`、`license`、`allowed-tools` 和 `metadata`。
 
-- `metadata.trigger`：使用简体中文处理 IEEE Transactions 形式学术论文的触发场景；子 skill 进一步限定到对应章节。
-- `metadata.target-venue`：`IEEE Transactions journals`。
+- `metadata.trigger`：使用简体中文处理 IEEE 学术论文的触发场景；子 skill 进一步限定到对应章节。
+- `metadata.target-venue`：`IEEE journals and conferences`。
 - `metadata.language`：`zh-CN`。
 - `metadata.repository`：本 skill 的 Github 仓库地址。
 - `allowed-tools`：列出文件读取与编辑、文件检索、命令执行和网页检索等工具名称；主 skill 与摘要子 skill 另列 `Task` 以支持独立审查。
@@ -140,7 +141,7 @@ $ieee-transactions-paper-writing-results-and-discussions-zh，检查结果分析
 
 ## 写作约定
 
-摘要不列具体数值，结果讨论不复述图表数据；正文围绕问题、机制与证据组织。默认以完整稿件 10 页为篇幅预算，并按目标期刊与用户要求调整。具体章节的字数、页数、文献预算及审批流程见相应 SKILL.md。
+摘要不列具体数值，结果讨论不复述图表数据；正文围绕问题、机制与证据组织。Transactions 默认预设以完整稿件 10 页为篇幅预算，实际预算按投稿目标与用户要求确定。具体章节的字数、页数、文献预算及审批流程见相应 SKILL.md。
 
 ## 许可证
 

@@ -1,13 +1,13 @@
 ---
-name: ieee-transactions-paper-writing-conclusion-zh
-description: 使用简体中文规划、撰写、修改和审查 IEEE Transactions 学术论文的结论。凝练问题建模、分析洞察、创新机制及实验支持的价值，组织局限与未来工作，避免重复贡献列表或图表数值。
+name: ieee-paper-writing-conclusion-zh
+description: 使用简体中文规划、撰写、修改和审查 IEEE 学术论文的结论。凝练问题建模、分析洞察、创新机制及实验支持的价值，组织局限与未来工作，避免重复贡献列表或图表数值。
 license: MIT
 allowed-tools: Read Write Edit Glob Grep Bash WebSearch WebFetch
 metadata:
   language: zh-CN
-  trigger: 使用简体中文规划、撰写、修改和审查 IEEE Transactions 形式的学术论文的结论。
-  target-venue: IEEE Transactions journals
-  repository: https://github.com/Arcadiastra/ieee-transactions-paper-writing-zh.git
+  trigger: 使用简体中文规划、撰写、修改和审查 IEEE 学术论文的结论。
+  target-venue: IEEE journals and conferences
+  repository: https://github.com/Arcadiastra/ieee-paper-writing-zh.git
 ---
 
 # Conclusion

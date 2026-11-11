@@ -1,19 +1,19 @@
 ---
-name: ieee-transactions-paper-writing-citation-zh
-description: 使用简体中文规划、撰写、修改和审查 IEEE Transactions 学术论文的引用与参考文献。检索、筛选和核验文献，检查论断支持关系、发表版本、来源质量、出版元数据及 BibTeX 显示格式。
+name: ieee-paper-writing-citation-zh
+description: 使用简体中文规划、撰写、修改和审查 IEEE 学术论文的引用与参考文献。检索、筛选和核验文献，检查论断支持关系、发表版本、来源质量、出版元数据及 BibTeX 显示格式。
 license: MIT
 allowed-tools: Read Write Edit Glob Grep Bash WebSearch WebFetch
 metadata:
   language: zh-CN
-  trigger: 使用简体中文规划、撰写、修改和审查 IEEE Transactions 形式的学术论文的引用与参考文献。
-  target-venue: IEEE Transactions journals
-  repository: https://github.com/Arcadiastra/ieee-transactions-paper-writing-zh.git
+  trigger: 使用简体中文规划、撰写、修改和审查 IEEE 学术论文的引用与参考文献。
+  target-venue: IEEE journals and conferences
+  repository: https://github.com/Arcadiastra/ieee-paper-writing-zh.git
 ---
 # Citation
 
-先读 [主 skill](../../SKILL.md)。以下为本套件默认显示样式，不代表所有 IEEE 刊物都强制使用；目标刊物明确要求优先。**引用的文献总数必须不少于 30 篇，其中 IEEE Trans. 来源的文献不得低于 20 篇。**
+先读 [主 skill](../../SKILL.md)。以下为本套件默认显示样式，目标投稿要求优先。**Transactions 默认预设要求引用的文献总数不少于 30 篇，其中 IEEE Trans. 来源的文献不少于 20 篇。** 短稿按主 skill 的页数比例进行缩放。
 
-注重引用质量：尽量少引用 JCR Q3 及以下级别期刊论文与层次较低的部分会议论文。多引用 Q1、Q2 的高水平文献，尤其是 IEEE Trans. 来源的文献。建议着重引用近 15 年以内的文献。对于与 AI 交叉的领域，可以适当引用相应顶会文献，但仍应以 IEEE Trans. 来源为主。
+注重引用质量：尽量少引用 JCR Q3 及以下级别期刊论文与层次较低的部分会议论文。多引用与研究相关的 Q1、Q2 高水平文献，尤其是 IEEE Trans. 来源的近 15 年以内的文献。对于与 AI 交叉的领域，可以结合研究主题适当引用相应顶会文献，但仍应以 IEEE Trans. 来源为主。
 
 禁止引用 ResearchGate 等来源，要追溯到文献的最终来源。且尽量追查到结论的最终来源，避免大面积引用同一篇综述类文献。
 

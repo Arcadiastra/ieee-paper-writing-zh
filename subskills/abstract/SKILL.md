@@ -1,13 +1,13 @@
 ---
-name: ieee-transactions-paper-writing-abstract-zh
-description: 使用简体中文规划、撰写、修改和审查 IEEE Transactions 学术论文的摘要与 Index Terms。组织问题、挑战、创新机制和定性验证的自包含论述，禁止具体数值，并提炼适合检索的关键词。
+name: ieee-paper-writing-abstract-zh
+description: 使用简体中文规划、撰写、修改和审查 IEEE 学术论文的摘要与 Index Terms。组织问题、挑战、创新机制和定性验证的自包含论述，禁止具体数值，并提炼适合检索的关键词。
 license: MIT
 allowed-tools: Read Write Edit Glob Grep Bash WebSearch WebFetch Task
 metadata:
   language: zh-CN
-  trigger: 使用简体中文规划、撰写、修改和审查 IEEE Transactions 形式的学术论文的摘要与 Index Terms。
-  target-venue: IEEE Transactions journals
-  repository: https://github.com/Arcadiastra/ieee-transactions-paper-writing-zh.git
+  trigger: 使用简体中文规划、撰写、修改和审查 IEEE 学术论文的摘要与 Index Terms。
+  target-venue: IEEE journals and conferences
+  repository: https://github.com/Arcadiastra/ieee-paper-writing-zh.git
 ---
 # Abstract
 
@@ -27,7 +27,7 @@ metadata:
 
 ## 写作规范
 
-- 必须包含至少一个在目标期刊范围的主题与至少一个明确的目标期刊核心研究对象名词。
+- 必须包含至少一个在投稿目标范围的主题与至少一个明确的投稿目标核心研究对象名词。
 - 必须具备完全的自包含性（Self-contained）。读者仅凭摘要就需要判断这篇论文是否值得下载或引用。因此，自身逻辑链必须完整，且能够与正文相对独立。
 - 禁止具体数字：性能数值、提升百分比、数据量、算例规模、模块数量、超参数和训练配置均不写；不能把阿拉伯数字换成英文拼写规避规则。
 - 必要的固定领域术语不按结果数值处理，例如 three-dimensional；按语义判断，不全局删字符。
@@ -44,7 +44,7 @@ metadata:
 
 ## 五词策略
 
-本 skill 默认采用五个关键词或关键词短语，覆盖研究链条。注意与目标期刊主题范围的一致性：**务必至少包含一个明确在目标期刊 scope 内的关键词**：
+本 skill 默认采用五个关键词或关键词短语，覆盖研究链条。注意与投稿目标主题范围的一致性：**务必至少包含一个明确在投稿目标 scope 内的关键词**：
 
 1. 研究对象或应用场景（1 个）：明确本研究所属的系统。例：`Distribution networks`（配电网）、`Microgrids`（微电网）、`Power transmission systems`（输电系统）等。
 2. 核心研究任务（1 个）：直接说明论文解决什么问题。例如 `State estimation`（状态估计）、`Optimal power flow`（最优潮流）、`Network reconfiguration`（网络重构）等。
@@ -74,14 +74,14 @@ IEEE 有官方维护的分类词库。优先选用官方词典中的规范词，
 
 # 检查与交付
 
-派出单独的审查子智能体，首先仅阅读论文标题、摘要和关键词并进行目标期刊主题范围检索，并返回：
+派出单独的审查子智能体，首先仅阅读论文标题、摘要和关键词并进行投稿目标主题范围检索，并返回：
 
-1. 标题、摘要和关键词中是否均包含至少一个在目标期刊范围的主题与至少一个明确的目标期刊核心研究对象名词，以及文章被以 `out of scope` 直接拒稿的可能性。
+1. 标题、摘要和关键词中是否均包含至少一个在投稿目标范围的主题与至少一个明确的投稿目标核心研究对象名词，以及文章被以 `out of scope` 直接拒稿的可能性。
 2. 正文内容的推测和创新性、论文质量的预估：该文段本身是否拥有足够的自明性，是否存在无任何上下文的疑似论文内部代号；
 
 若无法派出子智能体，则由主智能体替代该部分审查。
 
-其次，阅读检查每个方法和结果判断能否在正文找到依据，是否含具体数值，是否保留结构要求的完整逻辑链，句间衔接词使用是否流畅、是否与句间逻辑关系一致，以及是否满足已知目标期刊字数要求。
+其次，阅读检查每个方法和结果判断能否在正文找到依据，是否含具体数值，是否保留结构要求的完整逻辑链，句间衔接词使用是否流畅、是否与句间逻辑关系一致，以及是否满足已知投稿目标字数要求。
 
 修订时，先写修改详案，用户批准后再落盘。摘要的修改详案必须包括整个摘要的原文及其翻译、改文及其翻译、修改理由和对应的正文内容六部分。
 
